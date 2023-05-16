@@ -106,3 +106,36 @@ const filter = (...args) => {
 };
 
 console.log(filter(1, 2, 3));
+
+// Destructuring
+
+const number = [1, 2, 3];
+[num1, num2, num3] = number;
+
+console.log(num3, num2);
+
+// Reference types
+
+const obj = {
+  name: "Max",
+};
+
+const secondObj = obj;
+
+const thirdObj = {
+  ...obj,
+};
+
+obj.name = "Maximus";
+console.log(secondObj);
+console.log(thirdObj);
+
+
+// Array methods
+const arra = [1,2,3];
+
+const dubleNum = arra.map((num) =>{
+    return num * 2;
+})
+
+console.log(dubleNum);
