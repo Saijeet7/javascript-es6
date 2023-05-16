@@ -69,14 +69,40 @@ class HumanModern {
 }
 
 class PersonModern extends HumanModern {
-    name = "John";
-    gender = "female";
+  name = "John";
+  gender = "female";
 
-    printMyName = () =>{
-        console.log(this.name);
-    }
+  printMyName = () => {
+    console.log(this.name);
+  };
 }
 
 const modernPerson = new PersonModern();
 modernPerson.printMyName();
 modernPerson.printGender();
+
+//The Spread and Rest Operator
+
+const numbers = [1, 2, 3];
+const newNumber = [...numbers, 4];
+
+console.log(numbers);
+console.log(newNumber);
+
+const personSpread = {
+  name: "John",
+};
+
+const newPersonSpread = {
+  ...personSpread,
+  age: 17,
+};
+
+console.log(personSpread);
+console.log(newPersonSpread);
+
+const filter = (...args) => {
+  return args.filter((el) => el === 1);
+};
+
+console.log(filter(1, 2, 3));
