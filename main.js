@@ -35,20 +35,20 @@ const multiply = (number) => number * number;
 console.log(multiply(9));
 
 // Classes in JS
-class Human{
-    constructor(){
-        this.gender = 'male';
-    }
-    printGender(){
-        console.log(this.gender);
-    }
+class Human {
+  constructor() {
+    this.gender = "male";
+  }
+  printGender() {
+    console.log(this.gender);
+  }
 }
 
-class Person  extends Human{
+class Person extends Human {
   constructor() {
     super();
     this.name = "Max";
-    this.gender = 'female';
+    this.gender = "female";
   }
   printMyName() {
     console.log(this.name);
@@ -58,3 +58,25 @@ class Person  extends Human{
 const person = new Person();
 person.printMyName();
 person.printGender();
+
+// Moder Classes, Properties and Methods
+
+class HumanModern {
+  gender = "male";
+  printGender = () => {
+    console.log(this.gender);
+  };
+}
+
+class PersonModern extends HumanModern {
+    name = "John";
+    gender = "female";
+
+    printMyName = () =>{
+        console.log(this.name);
+    }
+}
+
+const modernPerson = new PersonModern();
+modernPerson.printMyName();
+modernPerson.printGender();
